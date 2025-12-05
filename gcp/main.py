@@ -4,13 +4,14 @@ import json
 import base64
 from google.cloud import pubsub_v1
 from google.cloud import firestore
+import config
 
 # Shared secret for simple authentication (must match firmware)
-API_KEY = "JsQH3ZkHTKHZLPhbDiUa"
+API_KEY = config.API_KEY
 
 # Pub/Sub Configuration
-PROJECT_ID = "davepooltemp"
-TOPIC_ID = "DavePoolTemp"
+PROJECT_ID = config.PROJECT_ID
+TOPIC_ID = config.TOPIC_ID
 
 publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(PROJECT_ID, TOPIC_ID)

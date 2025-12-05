@@ -1,4 +1,5 @@
 .pio
 src/secrets.h
+gcp/config.py
 __pycache__
 .DS_Store
